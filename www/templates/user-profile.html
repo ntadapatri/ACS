@@ -1,0 +1,21 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="FindFitness">
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" overflow-scroll='true'>
+      <h2 style="text-align: center;font-family: 'Lucida Calligraphy';font-size: xx-large; color: #4b8bf4; font-weight: bolder;"> User Profile </h2><br/>
+
+      <!-- <div ng-repeat="x in show_UserProfile()">
+        {{x.age}} <br>              
+      </div> -->
+      <div class="card">
+        Name: {{show_UserProfile().username}} <br>
+        Email: {{show_UserProfile().email}} <br>
+        Age: {{show_UserProfile().age}} <br>
+        Gender: {{show_UserProfile().gender}} <br>
+        Location: {{show_UserProfile().location}} <br>
+      </div>
+      
+    </ion-content>
+  </ion-view>
