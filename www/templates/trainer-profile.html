@@ -1,0 +1,20 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="FindFitness">
+    <ion-nav-buttons side="left">
+      <button class="button icon-left ion-chevron-left button-clear button-dark" onclick="location.href='#/trainer_dashboard'"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" overflow-scroll='true'>
+      <h2 style="text-align: center;font-family: 'Lucida Calligraphy';font-size: xx-large; color: #4b8bf4; font-weight: bolder;"> Trainer Profile </h2><br/>
+
+      <!-- <div ng-repeat="x in show_UserProfile()">
+        {{x.age}} <br>              
+      </div> -->
+      <div class="card">
+        Name: {{show_TrainerProfile().username}} <br>
+        Email: {{show_TrainerProfile().email}} <br>
+        Specialization: {{show_TrainerProfile().specialization}} <br>
+        Location: {{show_TrainerProfile().location}} <br>
+      </div>
+      
+    </ion-content>
+  </ion-view>

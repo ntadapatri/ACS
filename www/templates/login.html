@@ -1,0 +1,17 @@
+<ion-view view-title="FindFitness">
+    <ion-content class="padding" overflow-scroll='true'>
+      <br/><br/><br/><br/>
+      <div>
+        Email: <input type="text" ng-model="email">
+        Password: <input type="password" ng-model="password">
+        <br><br>
+        <button onclick="location.href='#/register'" >Create User</button>
+        <br><br>
+        <button ng-click="loginUser(email,password)">Login as User</button>
+        <br><br>
+        <button ng-click="loginTrainer(email,password)">Login as Trainer</button>
+        <br><br>
+        <button ng-click="loginNutritionist(email,password)">Login as Nutritionist</button>
+      </div>
+    </ion-content>
+  </ion-view>

@@ -1,0 +1,26 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="FindFitness">
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" overflow-scroll='true'>
+      <h2 style="text-align: center;font-family: 'Lucida Calligraphy';font-size: xx-large; color: #4b8bf4; font-weight: bolder;"> My Appointments </h2><br/>
+
+      <!-- <div>
+        <input type="date" placeholder="Date" ng-model="date">
+        <input type="time" placeholder="Time" ng-model="time">
+      </div>
+ 
+      <button ng-click="pass_appointment_1(date,time)">Create new appointment</button>
+      -->
+
+      <div class="card" ng-repeat="x in appointment_res()">
+        {{x.username}}<br>
+        {{x.email}}<br>
+        {{x.location}}<br>
+        {{x.date}}<br>
+        {{x.time}}<br>
+      </div>
+      
+    </ion-content>
+  </ion-view>
