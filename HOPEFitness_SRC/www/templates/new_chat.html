@@ -1,0 +1,47 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="FindFitness">
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content  overflow-scroll='true'>
+      <h2 style="text-align: center;font-family: 'Lucida Calligraphy';font-size: xx-large; color: #4b8bf4; font-weight: bolder;"> </h2><br/>
+      
+      <button class="button button-full button-assertive" onclick="location.href='#/search'">
+        Back to Search
+      </button>
+
+      <div class="item item-text-wrap ">
+        <table style="width:100%">
+          <tr>
+            <td>
+              To:
+            </td>
+            <td>
+              <input type="text" ng-model="showSender()"> 
+            </td>
+          </tr>
+        </table>
+      </div>
+
+     <!--  <div class="card padding" ng-repeat="x in showMessage()" background: blue>
+        {{x.name}}
+        <div class="item item-divider">
+          {{x.msg}}
+        </div>
+      </div> -->
+
+      <div class="item item-text-wrap">
+        <table style="width:100%">
+          <tr>
+          <td>
+            <input style= "font-weight: bold; font-size: large" type="text" placeholder="Type Message" ng-model="msg">
+          </td>
+          <td>
+            <button class="button button-block button-dark" ng-click="create_newchat(msg)"> Send</button>
+          </td>
+          </tr>
+        </table>
+      </div>
+
+    </ion-content>
+  </ion-view>

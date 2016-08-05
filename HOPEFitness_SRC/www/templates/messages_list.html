@@ -1,0 +1,17 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="HOPEFitness">
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" overflow-scroll='true'>
+      <h2 style="text-align: center;font-family: monospace ;font-size: 35px; color: black; font-weight: bolder;"> MessagesList </h2><br/>
+
+      <div class="card padding" style="background-color: #ffff66" ng-repeat="x in showAllMessages()" onclick= "location.href='#/messages'">
+        <div class="row">
+          <div class="col">
+           <h5 style="text-align: left; padding-left: 10px;"> {{x.to}} </h5> 
+          </div>
+        </div>
+      </div>  
+    </ion-content>
+  </ion-view>

@@ -1,0 +1,85 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="HOPEFitness">
+     <ion-nav-buttons side="right">
+       <button class="button button-icon button-clear ion-person" onclick="location.href='#/trainer-profile'"></button> 
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="left">
+       <button class="button button-icon button-clear ion-log-out" onclick="location.href='#/login'"></button> 
+    </ion-nav-buttons>
+
+    <ion-tabs class="tabs-positive tabs-icon-top">
+
+      <!-- <ion-tab title="TrainerDB_Ads" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
+        <ion-content>
+         <br/><br/><br/><br/>
+          <h2 style="text-align: center;font-family: 'Lucida Calligraphy';font-size: xx-large; color: #4b8bf4; font-weight: bolder;">  Ads </h2><br/>
+
+          <button ng-click="newTask()"> Post New Ad </button>
+      
+          <div class="card" ng-repeat="x in showAds()">
+            {{x.location}} <br>
+          </div>
+          
+        </ion-content>
+      </ion-tab> -->
+
+      <ion-tab title="My Subscriptions" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline"> 
+        <ion-content>
+         <br/><br/><br/><br/>
+        <h2 style="text-align: center;font-family: monospace ;font-size: 35px; color: black; font-weight: bolder;">    Subscriptions </h2><br/>
+
+        <div class="card" ng-repeat="x in subscription_res()">
+        <div class="item item-divider" style="background-color: #488AC7; color: white;">
+          {{x.username}}<br>
+        </div>
+        <div class="item item-text-wrap">
+        <table>
+          <tr>
+            <td>
+              <h3> Email: &nbsp;</h3> 
+            </td>
+            <td text-align: center;>
+              {{x.email}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3> Location: &nbsp;</h3> 
+            </td>
+            <td text-align: center;>
+              {{x.location}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3> Subscribed from: &nbsp;</h3> 
+            </td>
+            <td text-align: center;>
+              {{x.startdate}}
+            </td>
+          </tr>
+        </table>
+        </div>
+      </div>
+
+        </ion-content>
+      </ion-tab>
+
+      <ion-tab title="My Messages" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
+        <ion-content>
+         <br/><br/><br/><br/>
+        <h2 style="text-align: center;font-family: monospace ;font-size: 35px; color: black; font-weight: bolder;">    Messages </h2><br/>
+          <div class="card" style="background-color: #ffff66" onclick= "location.href='#/trainer_messages'"> 
+          <div class="row">
+            <div class="col">
+              <h5 style="text-align: left; padding-left: 10px;">  {{trainer_showAllMessages().to}} </h5> 
+            </div>
+          </div>
+          </div>
+        </ion-content>
+      </ion-tab>
+</ion-tabs>
+<!-- </ion-content> -->
+</ion-view>
+<!-- onclick= "location.href='#/trainer_messages'" -->

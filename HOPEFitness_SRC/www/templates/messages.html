@@ -1,0 +1,34 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="HOPEFitness">
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content  overflow-scroll='true'>
+      <h2 style="text-align: center;font-family: 'Lucida Calligraphy';font-size: xx-large; color: #4b8bf4; font-weight: bolder;"> </h2><br/>
+      <button class="button button-full button-assertive" onclick="location.href='#/messages_list'">
+        Back to Messages
+      </button>
+
+      <div class="card padding" ng-repeat="x in showMessage()" >
+        <p> <b> {{x.from}} </b> </p>
+        <div class="item item-divider">
+          {{x.msg}}
+        </div>
+      </div>
+
+      <div class="item item-text-wrap ">
+      <table style="width:100%">
+      <tr>
+        <td>
+        <input style= "font-weight: bold; font-size: medium" type="text" placeholder="Type Message" ng-model="msg">
+        </td>
+
+      <td>
+      <button class="button button-block button-dark" ng-click="create_message(msg)"> Send</button>
+      </td>
+      </div>
+
+    </ion-content>
+  </ion-view>
+
+

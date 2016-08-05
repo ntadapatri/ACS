@@ -1,0 +1,29 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="FindFitness">
+
+    <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-ios-arrow-back" onclick="location.href='#/nutritionist_dashboard'"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="padding" overflow-scroll='true'>
+      <h2 style="text-align: center;font-family: monospace ;font-size: 35px; color: black; font-weight: bolder;">  Nutritionist Profile </h2><br/>
+
+       <button class="button button-block button-dark" onclick="location.href='#/edit-nutritionist-profile'"> Edit Profile </button>
+
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label" style="font-weight: bold;">Name</span>
+            <br><br> {{show_NutritionistProfile().username}} <br>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label" style="font-weight: bold;">Email</span>
+          <br><br> {{show_NutritionistProfile().email}} <br>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label" style="font-weight: bold;">Location</span>
+          <br><br> {{show_NutritionistProfile().location}} <br>
+        </label>
+      </div>
+      
+    </ion-content>
+  </ion-view>

@@ -1,0 +1,112 @@
+<ion-view >
+  <ion-nav-title> 
+    <span style="color: yellow; font-family: monospace;">HOPEFitness </span>
+  </ion-nav-title> 
+  <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-chevron-left"" onclick="location.href='#/login'"></button>
+    </ion-nav-buttons>
+  <ion-tabs class="tabs-positive tabs-icon-top tabs-dark">
+    <ion-tab title="Register User" icon-on="ion-ios-people" icon-off="ion-ios-people-outline">
+
+      <ion-content>
+       <br/><br/><br/><br/>
+
+        <h2 style="text-align: center;font-family: monospace ;font-size: 35px; color: black; font-weight: bolder;">  Register User </h2><br/>
+
+        <div align="center">
+
+          <h4>Email</h4>
+          <input type="text" size="25" style="border:1px solid black; padding-left: 20px; font-size: 24px; font-family: monospace;" ng-model="email">
+
+          <h4>Password</h4>
+          <input type="password" size="25" style="border:1px solid black;padding-left: 20px; font-size: 24px; font-family: monospace;"  ng-model="password">
+
+          <h4>Username</h4>
+          <input type="text" size="25" style="border:1px solid black;padding-left: 20px; font-size: 24px; font-family: monospace;" ng-model="username">
+
+          <h4>Age</h4>
+          <input type="text" size="25" style="border:1px solid black;padding-left: 20px; font-size: 24px; font-family: monospace;" ng-model="age">
+
+
+          <h4>Gender</h4>
+          <select class="ion-input-select" style="border:1px solid black;" ng-model="gender"> 
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+          <br><br>
+          
+          <h4>Location</h4>
+          <input type="text" size="25" style="border:1px solid black;padding-left: 2px; font-size: 24px; font-family: monospace;" placeholder="{{location}}" ng-model="location">
+          
+          <button class="button button-dark" ng-click="getLoc()"> Use current location </button>
+          <br><br>
+
+          <button class="button button-full button-energized" ng-click="registerUser(email,password,username,age,gender,location)">Sign Me Up</button>  
+
+        </div>
+      </ion-content>
+    </ion-tab>
+
+    <ion-tab title="Register Trainer" icon-on="ion-ios-body" icon-off="ion-ios-body-outline">
+    <ion-content>
+     <br/><br/><br/><br/>
+      <h2 style="text-align: center;font-family: monospace;font-size: 35px; color: black; font-weight: bolder;">  Register Trainer </h2><br/>
+      
+      <div align="center">
+
+          <h4>Email</h4>
+          <input type="text" size="25" style="border:1px solid black; padding-left: 20px; font-size: 24px; font-family: monospace;"ng-model="email">
+
+          <h4>Password</h4>
+          <input type="password" size="25" style="border:1px solid black; padding-left: 20px; font-size: 24px; font-family: monospace;"  ng-model="password">
+
+          <h4>Username</h4>
+          <input type="text" size="25" style="border:1px solid black;padding-left: 20px; font-size: 24px; font-family: monospace;" ng-model="username">
+
+          <h4>Specialization</h4>
+          <input type="text" size="25" style="border:1px solid black;padding-left: 20px; font-size: 24px; font-family: monospace;" ng-model="specialization">
+
+          <h4>Type</h4>
+          <input type="text" size="25" style="border:1px solid black;padding-left: 20px; font-size: 24px; font-family: monospace;" ng-model="type">
+          
+          <h4>Location</h4>
+          <input type="text" size="25" style="border:1px solid black;padding-left: 2px; font-size: 24px; font-family: monospace;" placeholder="{{location}}" ng-model="location">
+          
+          <button class="button button-dark" ng-click="getLoc()"> Use current location </button>
+          <br><br>
+
+          <button class="button button-full button-positive" ng-click="registerTrainer(email,password,username,specialization,location)">Sign Me Up</button>  
+        </div>
+    </ion-content>
+    </ion-tab>
+
+    <ion-tab title="Register Nutritionist" icon-on="ion-ios-medkit" icon-off="ion-ios-medkit-outline">
+    <ion-content>
+     <br/><br/><br/><br/>
+      <h2 style="text-align: center;font-family: monospace ;font-size: 35px; color: black; font-weight: bolder;">  Register Nutritionist </h2><br/>
+      <div align="center">
+
+          <h4>Email</h4>
+          <input type="text" size="25" style="border:1px solid black;padding-left: 20px; font-size: 24px; font-family: monospace;"ng-model="email">
+
+          <h4>Password</h4>
+          <input type="password" size="25" style="border:1px solid black;padding-left: 20px; font-size: 24px; font-family: monospace;"  ng-model="password">
+
+          <h4>Username</h4>
+          <input type="text" size="25" style="border:1px solid black;padding-left: 20px; font-size: 24px; font-family: monospace;" ng-model="username">
+
+          <h4>Specialization</h4>
+          <input type="text" size="25" style="border:1px solid black;padding-left: 20px; font-size: 24px; font-family: monospace;" ng-model="specialization">
+          
+          <h4>Location</h4>
+          <input type="text" size="25" style="border:1px solid black;padding-left: 2px; font-size: 24px; font-family: monospace;" placeholder="{{location}}" ng-model="location">
+          
+          <button class="button button-dark" ng-click="getLoc()"> Use current location </button>
+          <br><br>
+
+          <button class="button button-full button-balanced" ng-click="registerNutritionist(email,password,username,specialization,location)">Sign Me Up</button>  
+        </div>
+    </ion-content>
+    </ion-tab>
+  </ion-tabs>
+  </ion-view>

@@ -1,0 +1,28 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="FindFitness">
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content>
+    <br>
+      <h2 style="text-align: center;font-family: monospace ;font-size: 35px; color: black; font-weight: bolder;"> Search Results </h2><br/>
+      
+      <div class="card" align="center" style="padding-left: 20px; background-color: LimeGreen">
+      <div ng-repeat="x in res_NutritionistSearch()">
+
+      <b> Nutritionist&nbsp;:&nbsp;&nbsp;{{x.username}} </b> <br>
+      <b> E-mail&nbsp;:&nbsp;&nbsp;{{x.email}} </b> <br>
+      <b> Location&nbsp;:&nbsp;{{x.location}} </b> <br>
+
+
+      <button class="button button-small button-assertive" style="font-size: 20px; border:1px black;border-radius: 15px;" ng-click="pass_appointment(x.username,x.email,x.location); newTask_datetime();"> Get Appointment</button> 
+          
+      <button class="button button-small button-assertive" style="font-size: 20px; border:1px black;border-radius: 15px;" ng-click="new_chat(x.email)"> Start Chat</button>
+      
+      </div>
+
+      </div>
+      
+
+    </ion-content>
+  </ion-view>

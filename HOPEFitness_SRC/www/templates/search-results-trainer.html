@@ -1,0 +1,22 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="FindFitness">
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content>
+      <br>
+      <h2 style="text-align: center;font-family: monospace ;font-size: 35px; color: black; font-weight: bolder;"> Search Results </h2><br/>
+      <div class="card" align="center" style="padding-left: 20px; background-color: #488AC7" ng-repeat="x in res_TrainerSearch()">  
+              Trainer&nbsp;:&nbsp;{{x.username}} <br>
+              E-mail&nbsp;:&nbsp;{{x.email}} <br>
+              Location&nbsp;:&nbsp;{{x.location}} <br>
+          
+            <button class="button button-small button-assertive" style="font-size: 20px; border:1px black;border-radius: 15px;" ng-click="pass_subscribe(x.username,x.email,x.location)"> Subscribe</button>
+          
+            <button class="button button-small button-assertive" style="font-size: 20px; border:1px black;border-radius: 15px;" ng-click="new_chat(x.email)"> Start Chat</button>
+      </div>
+      
+    </ion-content>
+  </ion-view>
+
+  <!-- onclick="location.href='#/new_chat'" -->

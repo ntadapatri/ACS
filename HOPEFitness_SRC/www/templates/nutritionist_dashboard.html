@@ -1,0 +1,96 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="HOPEFitness">
+    <ion-nav-buttons side="right">
+      <button class="button button-icon button-clear ion-person" onclick="location.href='#/nutritionist-profile'"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="left">
+       <button class="button button-icon button-clear ion-log-out" onclick="location.href='#/login'"></button> 
+    </ion-nav-buttons>
+   <!--  <ion-content class="padding" overflow-scroll='true'>
+      <h2 style="text-align: center;font-family: 'Lucida Calligraphy';font-size: xx-large; color: #4b8bf4; font-weight: bolder;"> Nutritionist Dashboard </h2><br/>
+ -->
+
+ <br/><br/><br/>
+    <ion-tabs class="tabs-positivity tabs-icon-top">
+      <!-- <ion-tab title="NutritionistDB_Ads" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
+      <ion-content>
+       <br/><br/><br/><br/>
+        <h2 style="text-align: center;font-family: 'Lucida Calligraphy';font-size: xx-large; color: #4b8bf4; font-weight: bolder;"> My Ads </h2><br/>
+
+          <button ng-click="newTask()"> Post New Ad </button>
+        
+          <div class="card" ng-repeat="x in showAds()" >
+                      
+            {{x.location}} <br>
+                      
+          </div>
+
+      </ion-content>
+      </ion-tab> -->
+
+
+    <ion-tab title="My Appointments" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
+    <ion-content>
+     <br/><br/><br/><br/>
+      <h2 style="text-align: center;font-family: monospace ;font-size: 35px; color: black; font-weight: bolder;">    My Appointments </h2><br/>
+
+      <div class="card" ng-repeat="x in showAppointment()" >
+
+        <div class="item item-divider" style="background-color: LimeGreen; color: white;">
+          Date&nbsp;:&nbsp;{{x.date}}<br>
+          Time&nbsp;:&nbsp;{{x.time}}<br>
+        </div>
+        <div class="item item-text-wrap">
+        <table>
+          <tr>
+            <td>
+              <h3> Username: &nbsp;</h3> 
+            </td>
+            <td text-align: center;>
+              {{x.username}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3> Email: &nbsp;</h3> 
+            </td>
+            <td text-align: center;>
+              {{x.email}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3> Location: &nbsp;</h3> 
+            </td>
+            <td text-align: center;>
+              {{x.location}}
+            </td>
+          </tr>
+        </table>
+        </div>
+
+      </div>
+ 
+    </ion-content>
+    </ion-tab>
+
+    <ion-tab title="My Messages" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
+    <ion-content>
+     <br/><br/><br/><br/>
+      <h2 style="text-align: center;font-family: monospace ;font-size: 35px; color: black; font-weight: bolder;">    My Messages </h2><br/>
+
+      <div class="card" style="background-color: #ffff66" onclick= "location.href='#/nut_messages'">
+        <div class="row">
+          <div class="col">
+            <h5 style="text-align: left; padding-left: 10px;"> {{nut_showAllMessages().to}} </h5> 
+          </div>
+        </div>
+      </div>
+
+    </ion-content>
+    </ion-tab>
+
+  </ion-tabs>
+     
+  <!-- </ion-content> -->
+  </ion-view>

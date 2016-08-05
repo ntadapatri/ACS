@@ -1,0 +1,45 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="HOPEFitness">
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content> 
+      <br>
+      <h2 style="text-align: center;font-family: monospace ;font-size: 35px; color: black; font-weight: bolder;">  My Subscriptions </h2><br/>
+
+      <div class="card" ng-repeat="x in subscription_res()">
+        <div class="item item-divider" style="background-color: #488AC7; color: white;">
+          Subscribed Since: {{x.startdate}} <br>
+        </div>
+        <div class="item item-text-wrap">
+        <table>
+          <tr>
+            <td>
+              <h3> Trainer: &nbsp;</h3> 
+            </td>
+            <td text-align: center;>
+              {{x.username}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3> Email: &nbsp;</h3> 
+            </td>
+            <td text-align: center;>
+              {{x.email}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3> Location: &nbsp;</h3> 
+            </td>
+            <td text-align: center;>
+              {{x.location}}
+            </td>
+          </tr>
+        </table>
+        </div>
+      </div>
+
+    </ion-content>
+  </ion-view>

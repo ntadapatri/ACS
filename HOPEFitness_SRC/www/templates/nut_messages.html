@@ -1,0 +1,35 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="HOPEFitness">
+    <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-ios-arrow-back" onclick="location.href='#/nutritionist_dashboard'"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <button class="button button-icon button-clear ion-person" onclick="location.href='#/nutritionist-profile'"></button>
+    </ion-nav-buttons>
+    <ion-content  overflow-scroll='true'>
+      <h2 style="text-align: center;font-family: 'Lucida Calligraphy';font-size: xx-large; color: #4b8bf4; font-weight: bolder;"> </h2><br/>
+      <button class="button button-full button-balanced" onclick="location.href='#/nutritionist_dashboard'">
+        Back to Messages
+      </button>
+
+      <div class="card padding" ng-repeat="x in nut_showMessage()" background: blue>
+        <p> <b> {{x.from}} </b> </p>
+        <div class="item item-divider">
+          {{x.msg}}
+        </div>
+      </div>
+
+      <div class="item item-text-wrap ">
+      <table style="width:100%">
+      <tr>
+        <td>
+        <input type="text" placeholder="Type Message" ng-model="msg">
+        </td>
+
+      <td>
+      <button class="button button-block button-dark" ng-click="nut_create_message(msg)"> Send</button>
+      </td>
+      </div>
+
+    </ion-content>
+  </ion-view>

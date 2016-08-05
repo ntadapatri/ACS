@@ -1,0 +1,62 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view>
+  <ion-nav-title> 
+    <span style="color: white; font-family: monospace;">HOPEFitness </span>
+  </ion-nav-title> 
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+  </ion-nav-buttons>
+
+  <ion-tabs class="tabs-positive tabs-icon-top tabs-dark">
+  <ion-tab title="Search Trainer" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
+  <ion-content> 
+  <br/><br/><br/><br/>
+    <h2 style="text-align: center;font-family: monospace ;font-size: 35px; color: black; font-weight: bolder;">  Search Trainer </h2><br/>
+
+    <div class="card" align="center" style="background-color: #488AC7">
+      <h4>Location</h4> 
+      <input type="text" size="25" style="width: 400px; padding-left: 20px; font-size: 12px; font-family: monospace;" placeholder="{{location}}" ng-model="location"> 
+      <button class="button button-dark" ng-click="getLoc().add"> Use current location </button>
+    </div>
+
+    <div class="card" align="center" style="background-color: #488AC7">
+      <h4>Specialization</h4>
+      <input type="text" size="25" style="width: 400px; padding-left: 20px; font-size: 24px; font-family: monospace;" name="specialization" ng-model="specialization"> 
+      <br>
+    </div>  
+
+    <div class="card" style="background-color: #488AC7">
+      <h4 align="center">Type</h4>
+      <ion-checkbox class="checkbox-assertive" ng-model="Pchecked">Personal</ion-checkbox>
+      <ion-checkbox class="checkbox-assertive" ng-model="Gchecked">Group</ion-checkbox>
+    </div>
+      
+    <button class="button button-full button-assertive" ng-click="searchTrainer(location,specialization,Pchecked,Gchecked)"> Search</button>
+    </div>
+  </ion-content>
+  </ion-tab>
+
+  <ion-tab title="Search Nutritionist" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
+    <ion-content>
+     <br/><br/><br/><br/>
+     <h2 style="text-align: center;font-family: monospace;font-size: 35px; color: black; font-weight: bolder;">  Search Nutritionist </h2><br/>
+      
+    <div class="card" align="center" style="background-color: LimeGreen">
+      <h4>Location</h4> 
+      <input type="text" size="25" style="width: 400px; padding-left: 20px; font-size: 24px; font-family: monospace;" placeholder="{{location}}" ng-model="location"> 
+      <button class="button button-dark" ng-click="getLoc()"> Use current location </button>
+    </div>
+
+    <div class="card" align="center" style="background-color: LimeGreen">
+      <h4>Specialization</h4>
+      <input type="text" size="25" style="width: 400px; padding-left: 20px; font-size: 24px; font-family: monospace;" name="specialization" ng-model="specialization"> 
+      <br>
+    </div> 
+    <br/>
+    <button class="button button-full button-assertive" ng-click="searchNutritionist(location,specialization)"> Search</button>
+    </div>
+  </ion-content>
+</ion-tab>
+</ion-tabs>
+</ion-content>
+</ion-view>

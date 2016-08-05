@@ -1,0 +1,53 @@
+<ion-nav-bar></ion-nav-bar>
+<ion-view view-title="HOPEFitness">
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" overflow-scroll='true'>
+      <h2 style="text-align: center;font-family: monospace ;font-size: 35px; color: black; font-weight: bolder;">   My Appointments </h2><br/>
+
+      <!-- <div>
+        <input type="date" placeholder="Date" ng-model="date">
+        <input type="time" placeholder="Time" ng-model="time">
+      </div>
+ 
+      <button ng-click="pass_appointment_1(date,time)">Create new appointment</button>
+      -->
+
+      <div class="card" ng-repeat="x in appointment_res()">
+        <div class="item item-divider" style="background-color: LimeGreen; color: white;">
+          Date: {{x.date}}<br>
+          Time: {{x.time}}
+        </div>
+        <div class="item item-text-wrap">
+        <table>
+          <tr>
+            <td>
+              <h3> Nutritionist: &nbsp;</h3> 
+            </td>
+            <td text-align: center;>
+              {{x.username}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3> Email: &nbsp;</h3> 
+            </td>
+            <td text-align: center;>
+              {{x.email}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3> Location: &nbsp;</h3> 
+            </td>
+            <td text-align: center;>
+              {{x.location}}
+            </td>
+          </tr>
+        </table>
+        </div>
+      </div>
+      
+    </ion-content>
+  </ion-view>
