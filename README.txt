@@ -1,3 +1,8 @@
+FINDFITNESS v2
+> AngularJS
+> HTML5
+> Ionic framework
+
 /*
   Author : Nagashree Tadapatri
   Mat.No.: 11007940
